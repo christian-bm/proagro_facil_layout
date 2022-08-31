@@ -19,7 +19,9 @@ const Card = ({ object }) => {
             </StyedDiv>
             <StyedDiv>
                 <StyledSpan>{object.email}</StyledSpan>
-                <StyledSpan>{object.harvest_date}</StyledSpan>
+                <StyledSpan>
+                    {new Date(object.harvest_date).toLocaleDateString()}
+                </StyledSpan>
             </StyedDiv>
         </StyledLi>
     );
